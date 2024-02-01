@@ -1,0 +1,81 @@
+h1 {
+    max-width: fit-content;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 3em;
+    margin-bottom: 3em;
+    padding: .5em;
+    color:rgb(27,172,228);
+    border: 4px solid rgb(180, 151, 251) ;
+    border-radius: 5px;
+}
+
+body{
+    background-color: honeydew;
+}
+
+img{
+    border-radius: 5px;
+}
+
+hr{
+    color: rgb(180, 151, 251);
+    width: 50%;
+}
+
+.gallery{
+    margin: 0 auto;
+    width: 85%;
+    border: 2px solid rgb(180, 151, 251);
+    border-radius: 5px;
+
+}
+
+.contact{
+    margin: .5em;
+}
+
+.form {
+    max-width: fit-content;
+    margin: 0 auto;
+    margin-top: 3em;
+    margin-bottom: 3em;
+    padding: 1em;
+    border: 1px solid black;
+    border-radius: 5px;
+    box-shadow: 2px 3px 10px 0 rgba(0, 0, 0, 0.3);
+    }
+
+.form_main_label{
+    margin: 0 auto;
+    margin-bottom: .5em;
+    max-width: fit-content;
+    display: flex;
+}
+
+.form__fieldset {
+    margin-bottom: 1em;
+    border: 2px solid rgb(180, 151, 251);
+    }
+.form__required-label {
+    width: 80px;
+    display: inline-block;
+    }
+.form__description {
+    resize: vertical;
+    }
+.form__submit {
+    display: block;
+    width: 100%;
+    margin-top: 1em;
+    padding: .5em;
+    }
+
+    .footer{
+        margin: 0 auto;
+        margin-top: 3em;
+        margin-bottom: 1em;
+        padding: .5em;
+        border: 3px dashed rgb(180, 151, 251);
+        border-radius: 5px;
+    }
