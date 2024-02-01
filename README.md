@@ -11,4 +11,4 @@
 
 [Repository](https://github.com/6dem/Personal-Website)
 
-![image](img\logo_neg.jpg)
+![image](img/logo_neg.jpg)
