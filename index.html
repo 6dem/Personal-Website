@@ -13,20 +13,22 @@
 
     <header>
         <nav id="menu">
-            <table class="menu">
-                <thead>
-                    <tr class="menu_head">
-                        <td  colspan="3">Menu</td>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><a href="#videos">My videos</a></td>
-                        <td><a href="#coop_form">Cooperation issues</a></td>
-                        <td><a href="#footer">Contacts</a></td>
-                    </tr>
-                </tbody>
-            </table>
+            <div class="menu_wrapper">
+                <table class="menu">
+                    <thead>
+                        <tr class="menu_head">
+                            <td  colspan="3">Menu</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><a href="#videos">My videos</a></td>
+                            <td><a href="#coop_form">Cooperation issues</a></td>
+                            <td><a href="#footer">Contacts</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </nav>
 
         <h1>Ablaev Edem</h1>
@@ -44,14 +46,19 @@
     <hr>
     <section class="videos" id="videos">
         <h2>My videos</h2>
-        <iframe width="343" height="610" src="https://www.youtube.com/embed/S4H2LWeBOTU" title="DUNK SESSION" frameborder="0" allow="autoplay;" allowfullscreen></iframe>
-        <iframe width="343" height="610" src="https://www.youtube.com/embed/NN0Azp96njs" title="BACKSCRATCHER DUNK" frameborder="0" allow="autoplay" allowfullscreen></iframe>
-        <iframe width="343" height="610" src="https://www.youtube.com/embed/1MZMNorjnEQ" title="WINDMILL" frameborder="0" allow="autoplay;" allowfullscreen></iframe>
-        <iframe width="343" height="610" src="https://www.youtube.com/embed/jZmaCs7ZqQ0" title="OFF THE BACKBOARD DUNK" frameborder="0" allow="autoplay;" allowfullscreen></iframe>
+        <div class="video_container">
+            <div class="video_slider">
+                <div class="video"> <iframe width="343" height="610" src="https://www.youtube.com/embed/S4H2LWeBOTU" title="DUNK SESSION" frameborder="0" allow="autoplay;" allowfullscreen></iframe> </div>
+                <div class="video"> <iframe width="343" height="610" src="https://www.youtube.com/embed/NN0Azp96njs" title="BACKSCRATCHER DUNK" frameborder="0" allow="autoplay" allowfullscreen></iframe> </div>
+                <div class="video"> <iframe width="343" height="610" src="https://www.youtube.com/embed/1MZMNorjnEQ" title="WINDMILL" frameborder="0" allow="autoplay;" allowfullscreen></iframe> </div>
+                <div class="video"> <iframe width="343" height="610" src="https://www.youtube.com/embed/jZmaCs7ZqQ0" title="OFF THE BACKBOARD DUNK" frameborder="0" allow="autoplay;" allowfullscreen></iframe> </div>
+            </div>
+        </div>
     </section>
 
+    <hr>
+
     <section class="coop_form" id="coop_form">
-        <hr>
         <h3>Сooperation issues</h3>
         <form action="mailto:edem.ablaev57@yandex.ru" class="form" method="" target="_blank">
             <fieldset class="form__fieldset">
