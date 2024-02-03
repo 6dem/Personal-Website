@@ -63,7 +63,7 @@ hr{
     height: 200px;
     border: 2px solid #98AFFB;
     border-radius: 5px;
-    box-sizing: border-box;
+
 }
 .gallery img{
     border-radius: 5px;
@@ -71,7 +71,7 @@ hr{
 }
 
 .videos{
-    width: 85%;
+    width: 95%;
     max-width: fit-content;
     margin: 0 auto;
     margin-bottom: 3em;
@@ -97,6 +97,7 @@ hr{
 }
 .video{
     flex: 0 0 auto;
+    height: 100%;
     box-sizing: border-box;
 }
 
