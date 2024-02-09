@@ -1,3 +1,10 @@
+:root{
+    --bg-color: #C6D3FD;
+    --acc-color: #98AFFB;
+    --ex-color: #566ebc;
+    --form-color: #f2f4f9;
+}
+
 h1 {
     max-width: fit-content;
     text-align: center;
@@ -5,26 +12,33 @@ h1 {
     margin-top: 3em;
     margin-bottom: 3em;
     padding: .5em;
-    color:#566ebc ;
-    border: 4px solid #98AFFB ;
+    color: var(--ex-color);
+    border: 4px solid var(--acc-color);
     border-radius: 5px;
 }
 
 body{
     margin: 0;
-    background-color: #C6D3FD;
+    background-color: var(--bg-color);
 
 }
 
 hr{
-    color: #98AFFB;
+    color: var(--acc-color);
     width: 75%;
+}
+
+.dark_mode{
+    --bg-color: #201c40;
+    --acc-color: #47497a;
+    --ex-color: #303d68;
+    --form-color: #f2f4f9;
 }
 
 .menu_wrapper{
     max-width: fit-content;
     margin: 0 auto;
-    border: 2px solid #98AFFB;
+    border: 2px solid var(--acc-color);
     border-radius: 5px;
 }
 .menu{
@@ -33,14 +47,14 @@ hr{
     border-collapse: collapse;
 }
 .menu_head{
-    background-color: #98AFFB;
+    background-color: var(--acc-color);
 }
 .menu td{
     text-align: center;
     padding: 1em ;
-    border: 4px solid #98AFFB;
+    border: 4px solid var(--acc-color);
     border-radius: 5px;
-    color: #566ebc;
+    color: var(--ex-color);
     text-decoration: none;
     font-weight: bold;
     font-size: large;
@@ -49,7 +63,7 @@ hr{
 .menu a{
     display: block;
     text-align: center;
-    color: #566ebc;
+    color: var(--ex-color);
     text-decoration: none;
     font-weight: bold;
     font-size: large;
@@ -61,7 +75,7 @@ hr{
     margin-bottom: 3em;
     width: 85%;
     height: 200px;
-    border: 2px solid #98AFFB;
+    border: 2px solid var(--acc-color);
     border-radius: 5px;
 
 }
@@ -70,28 +84,35 @@ hr{
     height: 100%;
 }
 
+
+@media(max-width: 400px){
+    .video iframe{
+        width: 270px;
+        height: 480px;
+    }
+}
 .videos{
-    width: 95%;
+    width: 85%;
     max-width: fit-content;
     margin: 0 auto;
-    margin-bottom: 3em;
-    padding-top: 1em;
 }
 .videos h2{
     margin-bottom: 1.5em;
     text-align: center;
-    color:#566ebc;
+    color:var(--ex-color);
 }
 .video_container {
     margin: 0 auto;
+    height: fit-content;
     width: 100%;
     overflow-x: scroll;
-    border: 4px solid #98AFFB;
+    border: 4px solid var(--acc-color);
     border-radius: 5px;
     box-sizing: border-box;
 }
 .video_slider {
     display: flex;
+    height: fit-content;
     gap: 10px;
     box-sizing: border-box;
 }
@@ -101,12 +122,11 @@ hr{
     box-sizing: border-box;
 }
 
-
-.coop_form h3{
-    text-align: center;
-    color:#566ebc;
+.coop_form{
+    box-sizing: border-box;
 }
 .form {
+    box-sizing: border-box;
     max-width: fit-content;
     margin: 0 auto;
     margin-top: 2em;
@@ -117,47 +137,61 @@ hr{
     box-shadow: 2px 3px 10px 0 rgba(0, 0, 0, 0.3);
     }
 .coop_form h3{
+    text-align: center;
+    color:var(--ex-color);
     margin: 0 auto;
-    margin-top: 2em;
+    margin-top: 1em;
+    padding-top: 1em;
     max-width: fit-content;
     display: flex;
 }
 .form__fieldset {
+    box-sizing: border-box;
+    margin: 0 auto;
     margin-bottom: 1em;
-    border: 2px solid #98AFFB;
+    width: 100%;
+    border: 2px solid var(--acc-color);
+    border-radius: 5px;
     }
 .form__required-label {
-    width: 80px;
+    width: 30%;
     display: inline-block;
     }
+.form input{
+    width: 60%;
+    background-color: var(--form-color);
+}
 .form__description {
-    background-color: #f2f4f9;
+    box-sizing: border-box;
+    width: 100%;
+    border: 2px solid var(--acc-color);
+    border-radius: 5px;
+    background-color: var(--form-color);
     resize: vertical;
     }
 .form__submit {
-    background-color: #98AFFB;
+    background-color: var(--acc-color);
+    border-radius: 5px;
     display: block;
     width: 100%;
     margin-top: 1em;
     padding: .5em;
     }
-.form input{
-    background-color: #f2f4f9;
-}
+
 
 
 footer h4{
     margin-top: 1em;
     padding-top: 1em;
     text-align: center;
-    color:#566ebc;
+    color:var(--ex-color);
 }
 .tfooter{
-    background-color: #f2f4f9;
+    background-color: var(--form-color);
     margin: 0 auto;
     margin-bottom: 1em;
     padding: .5em;
-    border: 3px dashed #98AFFB;
+    border: 3px dashed var(--acc-color);
     border-radius: 5px;
 }
 .contact{
