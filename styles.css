@@ -5,6 +5,10 @@
     --form-color: #f2f4f9;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 h1 {
     max-width: fit-content;
     text-align: center;
@@ -35,25 +39,38 @@ hr{
     --form-color: #f2f4f9;
 }
 
-.menu_wrapper{
-    max-width: fit-content;
-    margin: 0 auto;
-    border: 2px solid var(--acc-color);
-    border-radius: 5px;
-}
+
 .menu{
     max-width: fit-content;
     margin: 0 auto;
+    border: 4px solid var(--acc-color);
+    border-radius: 5px;
     border-collapse: collapse;
+    display: block;
+}
+.menu_wrapper{
+    max-width: fit-content;
+    margin: 0 auto;
 }
 .menu_head{
     background-color: var(--acc-color);
 }
+
+@media (hover :hover) {
+    .menu td:hover{
+        background-color: var(--acc-color);
+    }
+}
+
+@media (hover :none) {
+    .menu td:active{
+        background-color: var(--acc-color);
+    }
+}
+
 .menu td{
     text-align: center;
     padding: 1em ;
-    border: 4px solid var(--acc-color);
-    border-radius: 5px;
     color: var(--ex-color);
     text-decoration: none;
     font-weight: bold;
@@ -97,6 +114,8 @@ hr{
     margin: 0 auto;
 }
 .videos h2{
+    padding-top: 1.5em;
+    margin-top: 0;
     margin-bottom: 1.5em;
     text-align: center;
     color:var(--ex-color);
@@ -160,6 +179,7 @@ hr{
 .form input{
     width: 60%;
     background-color: var(--form-color);
+    text-overflow: ellipsis;
 }
 .form__description {
     box-sizing: border-box;
