@@ -1,15 +1,42 @@
 :root{
-    --bg-color: #C6D3FD;
-    --acc-color: #98AFFB;
-    --ex-color: #566ebc;
-    --form-color: #f2f4f9;
+    --bg-color: #f5f5dc;
+    --acc-color: #8e6244;
+    --ex-color: #5c3c37;
+    --form-color: #8e6244;
+    --form-text: #fff;
 }
+
+
+::selection{
+    background-color: var(--acc-color);
+}
+
 
 html{
     scroll-behavior: smooth;
 }
 
-h1 {
+/* header{
+    position: sticky;
+    top: 0;
+    left: auto;
+    z-index: 9999;
+} */
+
+#up-arrow{
+    position: fixed;
+    right: 18px;
+    bottom: 45px;
+    z-index: 9999;
+    padding: 2px 3px 2px 3px;
+    border: 4px solid var(--acc-color);
+    border-radius: 50%;
+    /* display: flex;
+    justify-content: end;
+    align-items: end; */
+}
+
+h1{
     max-width: fit-content;
     text-align: center;
     margin: 0 auto;
@@ -21,26 +48,124 @@ h1 {
     border-radius: 5px;
 }
 
+                                /* TOGGLER */
+.toggle-wrapper{
+    display: inline-block;
+    position: absolute;
+    top: 25px;
+    right: 30px;
+}
+.toggle-checkbox{
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 1;
+    width: 1;
+}
+.toggle-slot{
+    position: relative;
+    cursor: pointer;
+    height: 4em;
+    width: 8em;
+    border: 2px solid #e4e7ec;
+    border-radius: 10em;
+    background-color: white;
+    box-shadow: 0px 4px 10px #e4e7ec;
+    transition: background-color 250ms;
+}
+.toggle-checkbox:checked ~ .toggle-slot{
+    background-color: #374151;
+}
+.toggle-button{
+    transform: translate(4.7em,0.7em);
+    position: absolute;
+    height: 2.4em;
+    width: 2.4em;
+    border-radius: 50%;
+    background-color: #ffeccf;
+    box-shadow: inset 0px 0px 0px 0.3em #ffbb52;
+    transition: background-color 250ms,border-color 250ms,transform 1500ms cubic-bezier(.26,2,.46,.71);
+}
+.toggle-checkbox:checked ~ .toggle-slot .toggle-button{
+background-color: #485367;
+box-shadow: inset 0px 0px 0px 0.3em white;
+transform: translate(0.7em,0.7em);
+}
+.sun-icon{
+    position: absolute;
+    height: 2.4em;
+    width: 2.4em;
+    color: #ffbb52;
+}
+.sun-icon-wrapper{
+    position: absolute;
+    height: 2.4em;
+    width: 2.4em;
+    opacity: 1;
+    transform: translate(0.8em ,0.8em) rotate(15deg);
+    transform-origin: 50% 50%;
+    transition: opacity 150ms,transform 1500ms cubic-bezier(.26,2,.46,.71)
+}
+.toggle-checkbox:checked ~ .toggle-slot .sun-icon-wrapper{
+opacity: 0;
+transform: translate(1.2em,0.8em) rotate(0deg);
+}
+.moon-icon{
+    position: absolute;
+    height: 2.4em;
+    width: 2.4em;
+    color: white;
+}
+.moon-icon-wrapper{
+    position: absolute;
+    height: 2.4em;
+    width: 2.4em;
+    opacity: 0;
+    transform: translate(4.4em ,0.8em) rotate(0deg);
+    transform-origin: 50% 50%;
+    transition: opacity 150ms,transform 1500ms cubic-bezier(.26,2,.46,.71)
+}
+.toggle-checkbox:checked ~ .toggle-slot .moon-icon-wrapper{
+opacity: 1;
+transform: translate(4.8em,0.8em) rotate(-15deg);
+}
+
+
 body{
     margin: 0;
     background-color: var(--bg-color);
 
 }
+body.dark-theme{
+    --bg-color: #252850;
+    --acc-color: #f5f5dc;
+    --ex-color: #c9c9ac;
+    --form-color: #f5f5dc;
+    --form-text: #000;
+}
+
+.light-mode{
+    display: block;
+}
+.dark-mode{
+    display: none;
+}
+.light-photo{
+    display: block;
+}
+.dark-photo{
+    display: none;
+}
+
 
 hr{
     color: var(--acc-color);
     width: 75%;
 }
 
-.dark_mode{
-    --bg-color: #201c40;
-    --acc-color: #47497a;
-    --ex-color: #303d68;
-    --form-color: #f2f4f9;
-}
-
 
 .menu{
+    display: block;
     max-width: fit-content;
     margin: 0 auto;
     border: 4px solid var(--acc-color);
@@ -55,19 +180,16 @@ hr{
 .menu_head{
     background-color: var(--acc-color);
 }
-
 @media (hover :hover) {
     .menu td:hover{
         background-color: var(--acc-color);
     }
 }
-
 @media (hover :none) {
     .menu td:active{
         background-color: var(--acc-color);
     }
 }
-
 .menu td{
     text-align: center;
     padding: 1em ;
@@ -146,15 +268,19 @@ hr{
 }
 .form {
     box-sizing: border-box;
+    color: var(--ex-color);
     max-width: fit-content;
     margin: 0 auto;
     margin-top: 2em;
     margin-bottom: 3em;
     padding: 1em;
-    border: 1px solid black;
+    border: 1px solid var(--acc-color);
     border-radius: 5px;
-    box-shadow: 2px 3px 10px 0 rgba(0, 0, 0, 0.3);
+    box-shadow: 2px 3px 10px 0 var(--acc-color);
     }
+.form input::placeholder, textarea::placeholder, button{
+    color: var(--form-text);
+}
 .coop_form h3{
     text-align: center;
     color:var(--ex-color);
@@ -178,6 +304,7 @@ hr{
     }
 .form input{
     width: 60%;
+    border-radius: 5px;
     background-color: var(--form-color);
     text-overflow: ellipsis;
 }
@@ -190,14 +317,18 @@ hr{
     resize: vertical;
     }
 .form__submit {
-    background-color: var(--acc-color);
+    background-color: var(--ex-color);
+    border-color: var(--acc-color);
     border-radius: 5px;
     display: block;
     width: 100%;
     margin-top: 1em;
     padding: .5em;
     }
-
+.form__submit:hover {
+    background-color: var(--form-color);
+    cursor: pointer;
+}
 
 
 footer h4{
@@ -207,13 +338,34 @@ footer h4{
     color:var(--ex-color);
 }
 .tfooter{
-    background-color: var(--form-color);
+    background-color: var(--acc-color);
     margin: 0 auto;
     margin-bottom: 1em;
     padding: .5em;
-    border: 3px dashed var(--acc-color);
+    border: 3px dashed var(--bg-color);
     border-radius: 5px;
 }
 .contact{
     margin: .5em;
+}
+
+#tg img:hover{
+    border-radius: 5px;
+    box-shadow: 0px 0px 7px #1c9ff1 inset,
+                0px 0px 7px #1c9ff1;
+}
+#vk img:hover{
+    border-radius: 5px;
+    box-shadow: 0px 0px 7px #0679e6 inset,
+                0px 0px 7px #0679e6;
+}
+#inst img:hover{
+    border-radius: 5px;
+    box-shadow: 0px 0px 7px #ff0095 inset,
+                0px 0px 7px #ff0095;
+}
+#yt img:hover{
+    border-radius: 5px;
+    box-shadow: 0px 0px 7px #ff0000 inset,
+                0px 0px 7px #ff0000;
 }

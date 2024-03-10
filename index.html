@@ -6,11 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ablaev Edem</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="img/ico/logo_neg.ico">
+    <link rel="icon" href="img/logo_neg.jpg">
+    <script src="https://code.iconify.design/1/1.0.4/iconify.min.js"></script>
 </head>
 
 <body>
-
     <header>
         <nav id="menu">
             <div class="menu_wrapper">
@@ -30,17 +30,47 @@
                 </table>
             </div>
         </nav>
+    <label class="toggle-wrapper">
+            <input type="checkbox" name="checkbox" class="toggle-checkbox" id="themeToggle"/>
+            <div class="toggle-slot">
+                <div class="sun-icon-wrapper">
+                    <div class="iconify sun-icon" data-icon="feather-sun" data-inline="false"> </div>
+                </div>
 
-        <h1>Ablaev Edem</h1>
+                <div class="toggle-button"></div>
+                    <div class="moon-icon-wrapper">
+                    <div class="iconify moon-icon" data-icon="feather-moon" data-inline="false"> </div>
+                    </div>
+            </div>
+        </label>
+
+        <nav id="up-arrow">
+            <a href="#menu">
+                <div class="light-mode"><img src="img\up-arrow-brown.png" alt="↑" width='40'></div>
+                <div class="dark-mode"><img src="img\up-arrow-biege.png" alt="↑" width='40'></div>
+            </a>
+        </nav>
+
     </header>
- 
+
+    <h1>Ablaev Edem</h1>
+
     <section class="gallery" id="gallery">
         <marquee class="slider" behavior="alternate" direction="">
-            <img src="img\main_photo_orange.jpg", alt="main photo orange", width="200">
-            <img src="img\main_photo_pink.jpg", alt="main photo pink", width="200">
-            <img src="img\main_photo_neg.jpg", alt="main photo neg", width="200">
-            <img src="img\main_photo_white.jpg", alt="main photo white", width="200">
-            <img src="img\main_photo_blue.jpg", alt="main photo blue", width="200">
+            <div class="light-photo">
+                <img src="img\main_photo_neg_orange.jpg", alt="main photo neg orange", width="200">
+                <img src="img\main_photo_neg_yellow.jpg", alt="main photo neg yellow", width="200">
+                <img src="img\main_photo_neg_green.jpg", alt="main photo neg green", width="200">
+                <img src="img\main_photo_neg_blue.jpg", alt="main photo neg blue", width="200">
+                <img src="img\main_photo_neg_purple.jpg", alt="main photo neg purple", width="200">
+            </div>
+            <div class="dark-photo">
+                <img src="img\main_photo_orange.jpg", alt="main photo orange", width="200">
+                <img src="img\main_photo_pink.jpg", alt="main photo pink", width="200">
+                <img src="img\main_photo_white.jpg", alt="main photo white", width="200">
+                <img src="img\main_photo_blue.jpg", alt="main photo blue", width="200">
+                <img src="img\main_photo_green.jpg", alt="main photo green", width="200">
+            </div>
         </marquee>
     </section>
     <hr>
@@ -85,25 +115,26 @@
         <h4>Contacts</h4>
         <table class="tfooter">
             <tr>
-                <td><a class="contact" href="https://t.me/l6deml" target="_blank" title="TG">
-                        <img src="img/ico/telegram_icon_130816.ico" alt="logo TG" width="45">
+                <td><a class="contact" id="vk" href="https://vk.com/6demdunk" target="_blank" title="VK">
+                    <img src="img\free-icon-vkontakte-3536582.png" alt="logo VK" width="45">
+                </a>
+                </td>
+                <td><a class="contact" id="tg" href="https://t.me/l6deml" target="_blank" title="TG">
+                        <img src="img\free-icon-telegram-2111644.png" alt="logo TG" width="45">
                     </a>
                 </td>
-                <td><a class="contact" href="https://vk.com/6demdunk" target="_blank" title="VK">
-                        <img src="img/ico/VK-Icon_icon-icons.com_52860.ico" alt="logo VK" width="45">
+                <td><a class="contact" id="yt" href="https://youtube.com/@6demDunk" target="_blank" title="YT">
+                        <img src="img\free-icon-youtube-3128307.png" alt="logo YT" width="45">
+                    </a>
+                <td><a class="contact" id="inst" href="https://www.instagram.com/l6deml?igsh=MWtyd2xxbDdycGc5bg==" target="_blank" title="INST">
+                        <img src="img\free-icon-instagram-1384063.png" alt="logo INST" width="45">
                     </a>
                 </td>
-                <td><a class="contact" href="https://www.instagram.com/l6deml?igsh=MWtyd2xxbDdycGc5bg==" target="_blank" title="INST">
-                        <img src="img\3721672-instagram_108066.jpg" alt="logo INST" width="45">
-                    </a>
-                </td>
-                <td><a class="contact" href="https://youtube.com/@6demDunk" target="_blank" title="YT">
-                        <img src="img\ico\1491579609-yumminkysocialmedia08_83079.ico" alt="logo YT" width="45">
-                    </a>
                 </tr>
                 </tr>
         </table>
     </footer>
+    <script src="script.js"></script>
 </body>
 
 </html>
