@@ -6,31 +6,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ablaev Edem</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="img/logo_neg.jpg">
+    <link rel="icon" href="img/logo_neg.png" id="favicon">
     <script src="https://code.iconify.design/1/1.0.4/iconify.min.js"></script>
 </head>
 
-<body>
+<body id="body">
     <header>
-        <nav id="menu">
-            <div class="menu_wrapper">
-                <table class="menu">
-                    <thead>
-                        <tr class="menu_head">
-                            <td  colspan="3">Menu</td>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><a href="#videos">My videos</a></td>
-                            <td><a href="#coop_form">Cooperation issues</a></td>
-                            <td><a href="#footer">Contacts</a></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </nav>
-    <label class="toggle-wrapper">
+
+        <div class="container">
+            <aside class='sidebar' id="sidebar">
+            </aside>
+        </div>
+
+        <div class="menu_wrapper">
+            <nav id="menu">
+                <div class="menu-head">Menu</div>
+                <div class="menu-body">
+                    <a href="#videos">My videos</a>
+                    <a href="#coop_form">Cooperation issues</a>
+                    <a href="#footer">Contacts</a>
+                </div>
+            </nav>
+        </div>
+
+    <div id="toggle-container">
+        <label class="toggle-wrapper" id="toggle-wrapper">
             <input type="checkbox" name="checkbox" class="toggle-checkbox" id="themeToggle"/>
             <div class="toggle-slot">
                 <div class="sun-icon-wrapper">
@@ -43,6 +43,8 @@
                     </div>
             </div>
         </label>
+    </div>
+
 
         <nav id="up-arrow">
             <a href="#menu">
@@ -93,24 +95,28 @@
         <h3>Сooperation issues</h3>
         <form action="mailto:edem.ablaev57@yandex.ru" class="form" method="" target="_blank">
             <fieldset class="form__fieldset">
-            <legend class="form__legend">Required info</legend>
-            <label for="firstNameID" class="form__required-label">First Name: </label>
-            <input type="text" id="firstNameID" name="firstName" placeholder="first name" required>
-            <br><br>
-            <label for="lastNameID" class="form__required-label">Last Name: </label>
-            <input type="text" id="lastNameID" name="lastName" placeholder="last name" required>
-            <br><br>
-            <label for="emailID" class="form__required-label">Email: </label>
-            <input type="email" id="emailID" name="email" placeholder="email" required>
+                <legend class="form__legend">Required info</legend>
+                <div class="form-group">
+                    <input type="text" id="firstNameID" name="firstName" placeholder="first name" required>
+                    <label for="firstNameID" class="form-label">First Name: </label>
+                </div>
+                <div class="form-group">
+                    <input type="text" id="lastNameID" name="lastName" placeholder="last name" required>
+                    <label for="lastNameID" class="form-label">Last Name: </label>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="emailID" name="email" placeholder="email" required>
+                    <label for="emailID" class="form-label">Email: </label>
+                </div>
             </fieldset>
+            <br>
             <label for="descID" class="form__label">Additional info: </label>
             <br>
             <textarea id="descID" cols="37" rows="10" name="description" placeholder="write anything you want..." class="form__description"></textarea>
             <button class="form__submit">Submit form</button>
             </form>
-        <hr>
     </section>
-
+    <hr>
     <footer id="footer">
         <h4>Contacts</h4>
         <table class="tfooter">
