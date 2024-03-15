@@ -1,9 +1,28 @@
+const Toggle = document.getElementById('toggle-wrapper');
+const themeToggleContainer = document.getElementById('sidebar');
+
+// Функция для перемещения переключателя в соответствующий контейнер
+function moveToggle() {
+    if (window.innerWidth <= 768) {
+        themeToggleContainer.appendChild(Toggle); // Перемещаем переключатель в контейнер для маленьких устройств
+        Toggle.style.display = "inline-block"
+    } else {
+        Toggle.style.display = "inline-block"
+        document.getElementById('body').appendChild(Toggle); // Перемещаем переключатель в основной контейнер
+    }
+}
+
+// Вызываем функцию при загрузке страницы и изменении размера окна
+window.addEventListener('load', moveToggle);
+window.addEventListener('resize', moveToggle);
+
 const themeToggle = document.getElementById("themeToggle");
 const lightTheme = document.querySelector(".light-mode");
 const darkTheme = document.querySelector(".dark-mode");
 const lightPhoto = document.querySelector(".light-photo");
 const darkPhoto = document.querySelector(".dark-photo");
 const favicon = document.querySelector("#favicon");
+
 
 themeToggle.addEventListener("change", function() {
     if (this.checked) {
@@ -23,18 +42,4 @@ themeToggle.addEventListener("change", function() {
     }
 });
 
-const Toggle = document.getElementById('toggle-wrapper');
-const themeToggleContainer = document.getElementById('sidebar');
 
-// Функция для перемещения переключателя в соответствующий контейнер
-function moveToggle() {
-    if (window.innerWidth <= 768) {
-        themeToggleContainer.appendChild(Toggle); // Перемещаем переключатель в контейнер для маленьких устройств
-    } else {
-        document.getElementById('body').appendChild(Toggle); // Перемещаем переключатель в основной контейнер
-    }
-}
-
-// Вызываем функцию при загрузке страницы и изменении размера окна
-window.addEventListener('load', moveToggle);
-window.addEventListener('resize', moveToggle);
